@@ -1,6 +1,15 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@200;400;600&display=swap');
+
+/* font-family: 'Courgette', cursive;
+font-family: 'Montserrat', sans-serif; */
+
+/* 
+---------
+CSS RESET
+
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -44,4 +53,18 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* 
+RESET ENDS
+----------
+*/
+
+/* 
+----------
+GENERAL STYLES  
+*/
+
+h1 {
+    font-family: 'Courgette', cursive;
 }
