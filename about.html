@@ -7,25 +7,39 @@
     <title>About</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="/index.html">Potluck Planner</a>
-        <a href="/index.html">home</a>
-        <a href="/about.html">about</a>
-        <a
-          href="https://painlesspotlucks.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Sign In</a
+    <header class="app-header">
+      <nav class="main-nav">
+        <a class="logo-link" href="/index.html"> Potluck Planner </a>
+        <div class="main-links">
+          <a href="/index.html">home</a>
+          <a href="/about.html">about</a>
+          <a
+            href="https://painlesspotlucks.vercel.app/"
+            class="auth-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Sign In</a
+          >
+        </div>
+        <div
+          class="burger-menu"
+          role="button"
+          aria-label="Toggle Navigation Menu"
         >
+          <div class="burger-box">
+            <div class="burger-inner"></div>
+          </div>
+        </div>
       </nav>
       <div
+        class="about-banner"
         role="banner"
         aria-label="About Page banner of a calendar with a circled date"
       ></div>
     </header>
     <main>
       <section class="about-section">
+        <h1>Our Story</h1>
         <article>
           <figure>
             <img src="" alt="Our Project Lead" />

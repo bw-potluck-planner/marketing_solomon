@@ -7,26 +7,39 @@
     <title>Home</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="/index.html">Potluck Planner</a>
-        <a href="/index.html">home</a>
-        <a href="/about.html">about</a>
-        <a
-          href="https://painlesspotlucks.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Sign In</a
+    <header class="app-header">
+      <nav class="main-nav">
+        <a class="logo-link" href="/index.html"> Potluck Planner </a>
+        <div class="main-links">
+          <a href="/index.html">home</a>
+          <a href="/about.html">about</a>
+          <a
+            href="https://painlesspotlucks.vercel.app/"
+            class="auth-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Sign In</a
+          >
+        </div>
+        <div
+          class="burger-menu"
+          role="button"
+          aria-label="Toggle Navigation Menu"
         >
+          <div class="burger-box">
+            <div class="burger-inner"></div>
+          </div>
+        </div>
       </nav>
       <div
+        class="app-banner"
         role="banner"
         aria-label="Homepage banner of a group people eating together"
       ></div>
     </header>
     <main>
       <section class="home-section overview-section" id="overview">
-        <h1>Eat. Plan. Potluck</h1>
+        <h1>Eat, Plan, Potluck</h1>
         <article class="o-section eat">
           <h2>Eat</h2>
           <p>

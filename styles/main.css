@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@200;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@200;400;600&display=swap");
 
 /* font-family: 'Courgette', cursive;
 font-family: 'Montserrat', sans-serif; */
@@ -12,48 +12,147 @@ v2.0 | 20110126
 License: none (public domain)
 ---------
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
+  width: 100%;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --app-white: #fdf0d5;
+  --app-green: #36382e;
+  --app-orange: #d64933;
+  --app-silver: #7d8491;
+  --app-brown: #402a2c;
 }
 
 /* 
@@ -67,28 +166,129 @@ RESET ENDS
 GENERAL STYLES  
 ----------
 */
+body {
+  background: var(--app-white);
+  color: var(--app-green);
+}
+
+.app-header {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.main-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: var(--app-green);
+  color: var(--app-white);
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.app-banner,
+.about-banner {
+  height: 50vh;
+  width: 100%;
+  background: url(/media/img/home-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.about-banner {
+  background: url(/media/img/about-banner.jpg);
+  background-position: center top;
+}
+
+.logo-link {
+  font-family: "Courgette", cursive;
+}
+
+.main-links,
+.logo-link,
+.burger-menu {
+  display: inline-block;
+  width: 49%;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.main-links {
+  display: none;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.burger-menu {
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.burger-box {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+a {
+  display: inline-block;
+  color: var(--app-white);
+  text-decoration: none;
+}
+
+.auth-link {
+}
+
+h1,
+h2 {
+  text-align: center;
+}
 
 h1 {
-    font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
+  font-size: calc(2.5rem + 0.15vw);
 }
 
 .home-section .info-card img {
-    border-radius: 50%;
-    border: .15rem solid #D64933;
-    width: 3rem;
+  border-radius: 50%;
+  border: 0.15rem solid var(--app-orange);
+  width: 3rem;
 }
 
 .about-section .about-card nav a {
-    display: inline-block;
+  display: inline-block;
 }
 
 .about-section .about-card nav svg {
-    height: 1.5rem;
+  height: 1.5rem;
 }
 
 .about-section .about-card nav span {
-    /* position: relative;
-    top: -7.5px; */
-    font-size: 2rem;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 500px) {
+}
+
+@media only screen and (min-width: 800px) {
+  .main-links {
     display: inline-block;
+    text-align: right;
+    text-transform: uppercase;
+  }
+  .burger-menu {
+    display: none;
+  }
 }
