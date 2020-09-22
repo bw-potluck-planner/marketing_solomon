@@ -150,6 +150,7 @@ table {
 :root {
   --app-white: #fdf0d5;
   --app-green: #36382e;
+  --app-green-light: rgba(54, 56, 46, 0.9);
   --app-orange: #d64933;
   --app-silver: #7d8491;
   --app-brown: #402a2c;
@@ -170,6 +171,7 @@ APP STYLES
 body {
   background: var(--app-white);
   color: var(--app-green);
+  font-family: "Montserrat", sans-serif;
 }
 
 h1,
@@ -177,9 +179,38 @@ h2 {
   text-align: center;
 }
 
-h1 {
+h1,
+footer h2 {
   font-family: "Courgette", cursive;
   font-size: calc(2.5rem + 0.15vw);
+  margin: 2rem auto 3rem;
+  font-weight: 600;
+}
+
+a {
+  font-size: calc(1.4rem + 0.15vw);
+  font-weight: 200;
+}
+
+.active-link,
+a:hover {
+  font-weight: 400;
+}
+
+h2,
+figcaption,
+.logo-link {
+  font-size: calc(1.6rem + 0.15vw);
+  font-weight: 600;
+}
+
+nav .logo-link {
+  font-weight: 400;
+}
+
+p {
+  font-size: calc(1rem + 0.15vw);
+  font-weight: 400;
 }
 
 /* 
@@ -194,13 +225,13 @@ NAV STYLES
 }
 
 .main-nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  background: var(--app-green);
+  background: var(--app-green-light);
   color: var(--app-white);
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
 }
 
 .app-banner,
@@ -220,17 +251,20 @@ NAV STYLES
 
 .logo-link {
   font-family: "Courgette", cursive;
+  width: 69%;
 }
 
 .main-links,
 .logo-link,
 .burger-menu {
   display: inline-block;
-  width: 49%;
   margin: 0;
   text-transform: capitalize;
 }
-
+.burger-menu,
+.main-links {
+  width: 29%;
+}
 .main-links {
   display: none;
   text-align: right;
@@ -238,16 +272,20 @@ NAV STYLES
 }
 
 .mobile-links {
+  display: none;
   position: relative;
   left: 0;
   width: 100%;
   margin-top: 1rem;
   text-transform: uppercase;
+}
+
+.active-mobile {
   display: flex;
   text-align: center;
   flex-direction: column;
-  background: var(--app-green);
 }
+
 .mobile-links a {
   margin: 0.5rem;
 }
@@ -277,14 +315,13 @@ NAV STYLES
 .burger-inner {
   display: block;
   top: 50%;
-  margin-top: 2px;
 }
 
 .burger-inner,
 .burger-inner::before,
 .burger-inner::after {
   width: 35px;
-  height: 3px;
+  height: 2.5px;
   background-color: var(--app-white);
   border-radius: 3px;
   position: absolute;
@@ -315,6 +352,11 @@ NAV STYLES
 .burger-menu .burger-inner::after {
   transition: bottom 0.1s 0.14s ease,
     transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.burger-active .burger-inner,
+.burger-active .burger-inner::after {
+  height: 0.15rem;
 }
 .burger-active .burger-inner {
   transform: rotate(45deg);
@@ -367,7 +409,79 @@ NAV STYLES ENDS
   display: inline-block;
 }
 
+@-webkit-keyframes expand-down {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes expand-down {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fold-up {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@keyframes fold-up {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
 @media only screen and (min-width: 500px) {
+  .main-links,
+  .logo-link,
+  .burger-menu {
+    width: 49%;
+  }
 }
 
 @media only screen and (min-width: 800px) {
@@ -376,7 +490,9 @@ NAV STYLES ENDS
     text-align: right;
     text-transform: uppercase;
   }
-  .burger-menu {
+  .mobile-links,
+  .burger-menu,
+  .active-mobile {
     display: none;
   }
 }
