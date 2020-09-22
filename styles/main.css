@@ -72,16 +72,23 @@ h1 {
     font-family: 'Courgette', cursive;
 }
 
+.home-section .info-card img {
+    border-radius: 50%;
+    border: .15rem solid #D64933;
+    width: 3rem;
+}
+
 .about-section .about-card nav a {
     display: inline-block;
 }
 
 .about-section .about-card nav svg {
-    height: 30px;
+    height: 1.5rem;
 }
 
 .about-section .about-card nav span {
     /* position: relative;
     top: -7.5px; */
+    font-size: 2rem;
     display: inline-block;
 }
