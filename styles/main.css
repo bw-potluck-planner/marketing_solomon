@@ -163,13 +163,30 @@ RESET ENDS
 
 /* 
 ----------
-GENERAL STYLES  
+APP STYLES  
 ----------
 */
+
 body {
   background: var(--app-white);
   color: var(--app-green);
 }
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Courgette", cursive;
+  font-size: calc(2.5rem + 0.15vw);
+}
+
+/* 
+----------
+NAV STYLES  
+----------
+*/
 
 .app-header {
   width: 100%;
@@ -220,8 +237,24 @@ body {
   text-transform: uppercase;
 }
 
+.mobile-links {
+  position: relative;
+  left: 0;
+  width: 100%;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background: var(--app-green);
+}
+.mobile-links a {
+  margin: 0.5rem;
+}
+
 .burger-menu {
   cursor: pointer;
+  text-align: right;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
   transition-timing-function: linear;
@@ -235,10 +268,69 @@ body {
 }
 
 .burger-box {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 25px;
   display: inline-block;
   position: relative;
+}
+
+.burger-inner {
+  display: block;
+  top: 50%;
+  margin-top: 2px;
+}
+
+.burger-inner,
+.burger-inner::before,
+.burger-inner::after {
+  width: 35px;
+  height: 3px;
+  background-color: var(--app-white);
+  border-radius: 3px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.burger-inner::before,
+.burger-inner::after {
+  content: "";
+  display: block;
+}
+.burger-inner::before {
+  top: -10px;
+}
+.burger-inner::after {
+  bottom: -10px;
+}
+
+.burger-menu .burger-inner {
+  transition-duration: 0.1s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.burger-menu .burger-inner::before {
+  transition: top 0.1s 0.14s ease, opacity 0.1s ease;
+}
+.burger-menu .burger-inner::after {
+  transition: bottom 0.1s 0.14s ease,
+    transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.burger-active .burger-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.14s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.burger-active .burger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease, opacity 0.1s 0.14s ease;
+}
+.burger-active .burger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease,
+    transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 a {
@@ -250,15 +342,11 @@ a {
 .auth-link {
 }
 
-h1,
-h2 {
-  text-align: center;
-}
-
-h1 {
-  font-family: "Courgette", cursive;
-  font-size: calc(2.5rem + 0.15vw);
-}
+/* 
+----------
+NAV STYLES ENDS 
+----------
+*/
 
 .home-section .info-card img {
   border-radius: 50%;
