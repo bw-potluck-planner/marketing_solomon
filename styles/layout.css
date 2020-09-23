@@ -2,26 +2,27 @@
   --app-white: rgb(253, 240, 213);
   --app-green: #36382e;
   --app-green-light: rgba(54, 56, 46, 0.8);
+  --app-green-lighter: rgba(54, 56, 46, 0.5);
   --app-orange: #d64933;
-  --app-orange-light: rgba(214, 73, 51, 0.8);
-  --app-silver: #7d8491;
+  --app-orange-light: rgba(214, 73, 51);
+  --app-silver: rgba(125, 132, 145, 0.8);
   --app-brown: #402a2c;
 }
 
-.overview-section {
-  /* margin-bottom: 5rem; */
+nav {
+  z-index: 1;
 }
 
 hr {
   border: 2px dashed var(--app-orange);
   max-width: 1400px;
-  margin: 6rem auto;
+  margin: 8rem auto;
 }
 
 .o-section {
   background: var(--app-green-light);
   color: var(--app-white);
-  border-radius: 1rem;
+  border-radius: 0;
   box-shadow: inset 0 3px 2px rgba(255, 255, 255, 0.22),
     inset 0 -3px 2px rgba(0, 0, 0, 0.17),
     inset 0 20px 10px rgba(255, 255, 255, 0.12), 0 0 4px 1px rgba(0, 0, 0, 0.1),
@@ -44,7 +45,7 @@ hr {
   color: var(--app-orange-light);
   border-radius: 0.6rem;
   margin: 3rem 1.5rem;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem;
   text-align: center;
   box-shadow: inset 0 3px 2px rgba(255, 255, 255, 0.22),
     inset 0 -3px 2px rgba(0, 0, 0, 0.17),
@@ -53,24 +54,79 @@ hr {
 }
 
 .home-section .info-card img {
-  background: var(--app-green);
+  background: var(--app-green-light);
   border: 0.15rem solid var(--app-orange-light);
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2),
     0px -2px 10px rgba(255, 255, 255, 0.15);
 }
 
+.about-section .a-card {
+  padding: 2rem 2rem 1rem;
+  width: calc(100% - 2rem);
+  max-width: 600px;
+  background: var(--app-silver);
+  color: var(--app-green);
+  border-radius: 0.8rem;
+  margin: 3rem auto;
+  box-shadow: inset 0 3px 2px rgba(255, 255, 255, 0.22),
+    inset 0 -3px 2px rgba(0, 0, 0, 0.17),
+    inset 0 20px 10px rgba(255, 255, 255, 0.12), 0 0 4px 1px rgba(0, 0, 0, 0.1),
+    0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
 .about-section figcaption {
   font-family: "Montserrat", sans-serif;
   box-shadow: none;
+  border-bottom: 2px solid var(--app-green-light);
+  padding-bottom: 0.25rem;
 }
 
-.about-section img {
-  border: 0.2rem solid var(--app-green);
+.about-section figure {
+  text-align: center;
+}
+
+.about-section figure img {
+  width: 90%;
+  max-width: 300px;
+  margin: 1rem auto;
+  border: 0.25rem solid var(--app-green);
   border-radius: 50%;
   box-shadow: inset 0 3px 2px rgba(255, 255, 255, 0.22),
     inset 0 -3px 2px rgba(0, 0, 0, 0.17),
     inset 0 20px 10px rgba(255, 255, 255, 0.12), 0 0 4px 1px rgba(0, 0, 0, 0.1),
     0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.res-2 {
+  display: block;
+}
+.res-3,
+.res-4 {
+  display: none;
+}
+
+.a-info {
+  padding: 1.5rem 0 1rem;
+  margin-bottom: 6rem;
+  width: 100%;
+}
+
+.a-info p {
+  line-height: 1.5;
+  text-align: center;
+}
+
+.a-card {
+  position: relative;
+}
+
+.about-section .a-info nav {
+  position: absolute;
+  width: 100%;
+  bottom: 2rem;
+  left: 0;
+  text-align: center;
+  padding: 2rem 0 0;
 }
 
 @media only screen and (min-width: 500px) {
@@ -82,6 +138,23 @@ hr {
     width: 100%;
     max-width: 400px;
     margin: 4rem auto;
+  }
+  .about-section .a-info nav a svg {
+    height: 2rem;
+  }
+  .about-section .a-info nav span {
+    font-size: 2.5rem;
+    top: -0.25rem;
+    margin: 0 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  .res-2 {
+    display: none;
+  }
+  .res-3 {
+    display: inline;
   }
 }
 
@@ -99,6 +172,16 @@ hr {
   .home-section .info-card img {
     border-width: 0.2rem;
   }
+
+  .about-section .a-info nav a svg {
+    height: 2.2rem;
+  }
+
+  .about-section .a-info nav span {
+    font-size: 2.7rem;
+    top: -0.25rem;
+    margin: 0 0.5rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -112,6 +195,18 @@ hr {
     border-width: 0.25rem;
     width: calc(5.5rem + 0.15vw);
   }
+
+  .about-section .a-info nav a svg {
+    height: 2.5rem;
+  }
+  .about-section .a-info nav span {
+    font-size: 3rem;
+    top: -0.25rem;
+    margin: 0 0.5rem;
+  }
+  .res-4 {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1100px) {
@@ -122,5 +217,10 @@ hr {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1300px) {
+  .about-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }

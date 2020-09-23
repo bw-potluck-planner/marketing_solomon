@@ -150,6 +150,7 @@ table {
 :root {
   --app-white: rgb(253, 240, 213);
   --app-green: #36382e;
+  --app-off-green: #5e5d50;
   --app-green-light: rgba(54, 56, 46, 0.8);
   --app-orange: #d64933;
   --app-silver: #7d8491;
@@ -198,6 +199,23 @@ figcaption {
   line-height: 2;
 }
 
+cite,
+blockquote {
+  font-size: calc(1.5rem + 0.15vw);
+  line-height: 1.75;
+  text-align: center;
+  margin: 0rem auto 1rem;
+  max-width: 900px;
+  width: 80%;
+  display: block;
+}
+blockquote {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+}
+cite {
+  margin-bottom: 5rem;
+}
 .main-nav a {
   font-size: calc(1.4rem + 0.15vw);
   font-weight: 400;
@@ -233,6 +251,10 @@ nav .logo-link {
   opacity: 1;
 }
 
+.about-section figcaption {
+  font-size: calc(1.2rem + 0.15vw);
+}
+
 p {
   font-size: calc(1rem + 0.15vw);
   font-weight: 400;
@@ -256,6 +278,7 @@ MAIN NAV STYLES
 
 .main-nav {
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   background: var(--app-green-light);
@@ -445,23 +468,26 @@ section {
   text-align: center;
 }
 
-.about-section .about-card nav a {
+.about-section .a-info nav a {
   display: inline-block;
 }
 
-.about-section .about-card nav svg {
-  height: 1.5rem;
+.about-section .a-info nav a svg {
+  height: 1.8rem;
 }
 
-.about-section .about-card nav span {
+.about-section .a-info nav span {
   font-size: 2rem;
   display: inline-block;
+  position: relative;
+  top: -0.25rem;
+  margin: 0 0.5rem;
 }
 
 footer {
   margin-top: 10rem;
-  background: var(--app-brown);
-  color: var(--app-orange);
+  background: var(--app-green-light);
+  color: var(--app-white);
   padding: 2rem 0;
   text-align: center;
   box-shadow: inset 0 3px 2px rgba(255, 255, 255, 0.22),
@@ -470,7 +496,7 @@ footer {
     0 3px 2px rgba(0, 0, 0, 0.2);
 }
 footer h2 {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 @media only screen and (min-width: 500px) {
@@ -497,6 +523,9 @@ footer h2 {
     font-size: calc(1.2rem + 0.15vw);
   }
 
+  .about-section figcaption {
+    font-size: calc(1.4rem + 0.15vw);
+  }
   /* -------
   Fonts End
   ------- */
@@ -540,6 +569,10 @@ footer h2 {
 
   p {
     font-size: calc(1.3rem + 0.15vw);
+  }
+
+  .about-section figcaption {
+    font-size: calc(1.5rem + 0.15vw);
   }
   /* -------
   Fonts End
