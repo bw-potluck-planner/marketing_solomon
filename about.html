@@ -3,71 +3,144 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="media/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="media/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="media/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="media/safari-pinned-tab.svg" color="#d64933" />
+    <meta name="msapplication-TileColor" content="#fdf0d5" />
+    <meta name="theme-color" content="#fdf0d5" />
+    <link rel="stylesheet" href="styles/animations.css" />
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
     <title>About</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="/index.html">Potluck Planner</a>
-        <a href="/index.html">home</a>
-        <a href="/about.html">about</a>
-        <a
-          href="https://painlesspotlucks.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Sign In</a
+    <header class="app-header">
+      <nav class="main-nav">
+        <a class="logo-link" href="/index.html"> Potluck Planner </a>
+        <div class="main-links">
+          <a href="/index.html">home</a>
+          <a href="/about.html" class="active-link">about</a>
+          <a
+            href="https://painlesspotlucks.vercel.app/"
+            class="auth-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Sign In</a
+          >
+        </div>
+        <div
+          class="burger-menu"
+          role="button"
+          aria-label="Toggle Navigation Menu"
         >
+          <div class="burger-box">
+            <div class="burger-inner"></div>
+          </div>
+        </div>
+        <div class="mobile-links">
+          <a href="/index.html">home</a>
+          <a href="/about.html" class="active-link">about</a>
+          <a
+            href="https://painlesspotlucks.vercel.app/"
+            class="auth-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Sign In</a
+          >
+        </div>
       </nav>
       <div
+        class="about-banner"
         role="banner"
         aria-label="About Page banner of a calendar with a circled date"
       ></div>
     </header>
     <main>
+      <h1>Our Story</h1>
       <section class="about-section">
-        <article>
+        <article class="a-card">
           <figure>
-            <img src="" alt="Our Project Lead" />
-            <figcaption>Tiffany Arellano - Project Lead</figcaption>
+            <img
+              src="https://ca.slack-edge.com/ESZCHB482-W0138D8CX0Q-a7076291a0cf-512"
+              alt="Our Project Lead"
+            />
+            <figcaption>
+              Tiffany Arellano <br class="res-2" />
+              <span class="res-3">-</span> Project Lead
+            </figcaption>
           </figure>
-          <div class="about-card">
-            <p></p>
+          <div class="a-info">
+            <p>
+              Tiffany is a UI developer that enjoys tackling on new challenges
+              and debugging code. During her free times you can find her out on
+              an adventure with her camera or with her nose buried in a book.
+            </p>
             <nav>
-              <a href="">
+              <a
+                href="https://github.com/yirano"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>GitHub icon</title>
+                  <title>GitHub</title>
                   <path
+                    fill="#36382e"
                     d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
                   />
                 </svg>
               </a>
               <span>&#183;</span>
-              <a href="">
+              <a
+                href="mailto:yirano@protonmail.ch?subject=Hello%2C%20let%27s%20chat!"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>Gmail icon</title>
+                  <title>Email</title>
                   <path
+                    fill="#36382e"
                     d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"
                   />
                 </svg>
               </a>
               <span>&#183;</span>
-              <a href="">
+              <a
+                href="https://www.linkedIn.com/in/yt-arellano"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>LinkedIn icon</title>
+                  <title>LinkedIn</title>
                   <path
+                    fill="#36382e"
                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
                   />
                 </svg>
@@ -75,48 +148,72 @@
             </nav>
           </div>
         </article>
-        <article>
+        <article class="a-card">
           <figure>
-            <img src="" alt="Our Back End Developer" />
-            <figcaption>Tim McDonald - Back End Developer</figcaption>
+            <img
+              src="https://avatars3.githubusercontent.com/u/66280945?s=460&u=b59a8cf673afe0cd2211f28b78a0bca41b5f3a38&v=4"
+              alt="Our BackEnd Engineer, Tim McDonald"
+            />
+            <figcaption>
+              Tim McDonald <br class="res-2" />
+              <span class="res-3">-</span> BackEnd Engineer
+            </figcaption>
           </figure>
-          <div class="about-card">
-            <p></p>
+          <div class="a-info">
+            <p>
+              Tim is a Game Designer and Full stack Developer. He is interested
+              in creating Virtual Worlds and story focused HTML games.
+            </p>
             <nav>
-              <a href="">
+              <a
+                href="https://github.com/timotheemcdonald"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>GitHub icon</title>
+                  <title>GitHub</title>
                   <path
+                    fill="#36382e"
                     d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
                   />
                 </svg>
               </a>
               <span>&#183;</span>
-              <a href="">
+              <a
+                href="mailto:timotheemcdonald@gmail.com?subject=Hello%2C%20let%27s%20chat!"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>Gmail icon</title>
+                  <title>Email</title>
                   <path
+                    fill="#36382e"
                     d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"
                   />
                 </svg>
               </a>
               <span>&#183;</span>
-              <a href="">
+              <a
+                href="https://www.linkedin.com/in/tim-mcdonald-7a79a41b4/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>LinkedIn icon</title>
+                  <title>LinkedIn</title>
                   <path
+                    fill="#36382e"
                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
                   />
                 </svg>
@@ -124,48 +221,72 @@
             </nav>
           </div>
         </article>
-        <article>
+        <article class="a-card">
           <figure>
-            <img src="" alt="Our Front End Lead" />
-            <figcaption>Sara Cearc - Front End Lead</figcaption>
+            <img
+              src="https://ca.slack-edge.com/ESZCHB482-W015QHDJ91Q-4514f619d5ad-512"
+              alt="Our FrontEnd Architect, Sara Cearc"
+            />
+            <figcaption>
+              Sara Cearc <br class="res-2" />
+              <span class="res-3">-</span> FrontEnd Architect
+            </figcaption>
           </figure>
-          <div class="about-card">
-            <p></p>
+          <div class="a-info">
+            <p>
+              Sara is a Full Stack developer. In her free time she enjoys games,
+              reading, and spending time with her family.
+            </p>
             <nav>
-              <a href="">
+              <a
+                href="https://github.com/cearc-sara"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>GitHub icon</title>
+                  <title>GitHub</title>
                   <path
+                    fill="#36382e"
                     d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
                   />
                 </svg>
               </a>
               <span>&#183;</span>
-              <a href="">
+              <a
+                href="mailto:scearc930@gmail.com?subject=Hello%2C%20let%27s%20chat!"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>Gmail icon</title>
+                  <title>Email</title>
                   <path
+                    fill="#36382e"
                     d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"
                   />
                 </svg>
               </a>
               <span>&#183;</span>
-              <a href="">
+              <a
+                href="https://www.linkedin.com/in/sara-cearc-4865a3193/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>LinkedIn icon</title>
+                  <title>LinkedIn</title>
                   <path
+                    fill="#36382e"
                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
                   />
                 </svg>
@@ -173,48 +294,72 @@
             </nav>
           </div>
         </article>
-        <article>
+        <article class="a-card">
           <figure>
-            <img src="" alt="Our Front End Developer" />
-            <figcaption>Reuben Palumbo - Front End Developer</figcaption>
+            <img
+              src="https://ca.slack-edge.com/ESZCHB482-W017LT9E9BP-4c8ecb2de753-512"
+              alt="Our FrontEnd Architect, Reuben Palumbo"
+            />
+            <figcaption>
+              Reuben Palumbo <br class="res-2" />
+              <span class="res-3">-</span> FrontEnd Architect
+            </figcaption>
           </figure>
-          <div class="about-card">
-            <p></p>
+          <div class="a-info">
+            <p>
+              In high school he took about 2 years of programing classes, and
+              moved into lambda to put those skills to use.
+            </p>
             <nav>
-              <a href="">
+              <a
+                href="https://github.com/reubenPalumbo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>GitHub icon</title>
+                  <title>GitHub</title>
                   <path
+                    fill="#36382e"
                     d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
                   />
                 </svg>
               </a>
               <span>&#183;</span>
-              <a href="">
+              <a
+                href="mailto:reubensandwichthe1st@gmail.com?subject=Hello%2C%20let%27s%20chat!"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>Gmail icon</title>
+                  <title>Email</title>
                   <path
+                    fill="#36382e"
                     d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"
                   />
                 </svg>
               </a>
               <span>&#183;</span>
-              <a href="">
+              <a
+                href="https://www.linkedin.com/in/reuben-palumbo-412a921b5/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>LinkedIn icon</title>
+                  <title>LinkedIn</title>
                   <path
+                    fill="#36382e"
                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
                   />
                 </svg>
@@ -222,48 +367,74 @@
             </nav>
           </div>
         </article>
-        <article>
+        <article class="a-card">
           <figure>
-            <img src="" alt="Our UI Specialist" />
-            <figcaption>Andrew Poppenberg - UI Specialist</figcaption>
+            <img
+              src="https://ca.slack-edge.com/ESZCHB482-W0198A541D0-4d43ee411079-512"
+              alt="Our UI Developer"
+            />
+            <figcaption>
+              Andrew Poppenberg <br class="res-2" />
+              <span class="res-3">-</span> UI Developer
+            </figcaption>
           </figure>
-          <div class="about-card">
-            <p></p>
+          <div class="a-info">
+            <p>
+              Andrew is a Full Stack Developer who loves new challenges.
+              Normally you will find him in his natural habitat in front of a
+              computer monitor. When he isn't there he is sure to be outside
+              being active.
+            </p>
             <nav>
-              <a href="">
+              <a
+                href="https://github.com/TheGitHubFiles"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>GitHub icon</title>
+                  <title>GitHub</title>
                   <path
+                    fill="#36382e"
                     d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
                   />
                 </svg>
               </a>
               <span>&#183;</span>
-              <a href="">
+              <a
+                href="mailto:andrewpoppenberg@yahoo.com?subject=Hello%2C%20let%27s%20chat!"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>Gmail icon</title>
+                  <title>Email</title>
                   <path
+                    fill="#36382e"
                     d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"
                   />
                 </svg>
               </a>
               <span>&#183;</span>
-              <a href="">
+              <a
+                href="https://www.linkedin.com/in/andrew-poppenberg-b12b281b5/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>LinkedIn icon</title>
+                  <title>LinkedIn</title>
                   <path
+                    fill="#36382e"
                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
                   />
                 </svg>
@@ -271,48 +442,73 @@
             </nav>
           </div>
         </article>
-        <article>
+        <article class="a-card">
           <figure>
-            <img src="" alt="Our UI Specialist" />
-            <figcaption>Solomon Zelenko - UI Specialist</figcaption>
+            <img
+              src="https://avatars1.githubusercontent.com/u/39205476?s=460&u=e84d6fe8caf14bcf5e5dc5be000bdd8ec6e861d6&v=4"
+              alt="Our UI Developer, Solomon Zelenko"
+            />
+            <figcaption>
+              Solomon Zelenko <br class="res-2" />
+              <span class="res-3">-</span> UI Developer
+            </figcaption>
           </figure>
-          <div class="about-card">
-            <p></p>
+          <div class="a-info">
+            <p>
+              Solomon is a Full Stack Developer and Writer who enjoys bringing
+              projects to life. In his spare time, he enjoys baking bread, going
+              on hikes, and staying curious.
+            </p>
             <nav>
-              <a href="">
+              <a
+                href="https://github.com/zempo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>GitHub icon</title>
+                  <title>GitHub</title>
                   <path
+                    fill="#36382e"
                     d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
                   />
                 </svg>
               </a>
               <span>&#183;</span>
-              <a href="">
+              <a
+                href="mailto:support@solomonzelenko.dev?subject=Hello%2C%20let%27s%20chat!"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>Gmail icon</title>
+                  <title>Email</title>
                   <path
+                    fill="#36382e"
                     d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"
                   />
                 </svg>
               </a>
               <span>&#183;</span>
-              <a href="">
+              <a
+                href="https://www.linkedin.com/in/solomon-zelenko/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>LinkedIn icon</title>
+                  <title>LinkedIn</title>
                   <path
+                    fill="#36382e"
                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
                   />
                 </svg>
@@ -324,7 +520,7 @@
     </main>
     <footer>
       <h2>Potluck Planner</h2>
-      <p>&copy; 2020, Team Potluck. All Rights Reserved.</p>
+      <p>&copy; 2020, Team Potluck. <br class="res" />All Rights Reserved.</p>
     </footer>
     <script src="scripts/main.js"></script>
   </body>

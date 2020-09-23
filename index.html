@@ -3,58 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="media/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="media/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="media/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="media/safari-pinned-tab.svg" color="#d64933" />
+    <meta name="msapplication-TileColor" content="#fdf0d5" />
+    <meta name="theme-color" content="#fdf0d5" />
+    <link rel="stylesheet" href="styles/animations.css" />
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
     <title>Home</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="/index.html">Potluck Planner</a>
-        <a href="/index.html">home</a>
-        <a href="/about.html">about</a>
-        <a
-          href="https://painlesspotlucks.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Sign In</a
+    <header class="app-header">
+      <nav class="main-nav">
+        <a class="logo-link" href="/index.html"> Potluck Planner </a>
+        <div class="main-links">
+          <a href="/index.html" class="active-link">home</a>
+          <a href="/about.html">about</a>
+          <a
+            href="https://painlesspotlucks.vercel.app/"
+            class="auth-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Sign In</a
+          >
+        </div>
+        <div
+          class="burger-menu"
+          role="button"
+          aria-label="Toggle Navigation Menu"
         >
+          <div class="burger-box">
+            <div class="burger-inner"></div>
+          </div>
+        </div>
+        <div class="mobile-links">
+          <a href="/index.html" class="active-link">home</a>
+          <a href="/about.html">about</a>
+          <a
+            href="https://painlesspotlucks.vercel.app/"
+            class="auth-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Sign In</a
+          >
+        </div>
       </nav>
       <div
+        class="app-banner"
         role="banner"
         aria-label="Homepage banner of a group people eating together"
       ></div>
     </header>
     <main>
       <section class="home-section overview-section" id="overview">
-        <h1>Eat. Plan. Potluck</h1>
+        <h1>Eat &#183; Plan &#183; Potluck</h1>
+        <blockquote
+          cite="https://www.azquotes.com/quotes/topics/sharing-food.html"
+        >
+          "We should look for someone to eat and drink with <br class="res-4" />
+          before looking for something to eat and drink."
+        </blockquote>
+        <cite>Epicurus</cite>
         <article class="o-section eat">
           <h2>Eat</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-            maiores inventore consequatur, nesciunt tempora magnam vel, nam
-            magni ab eveniet laborum eos exercitationem, atque voluptatem? Modi
-            repellendus a aut? Illo unde fugiat esse?
+            When we gather around a table, sharing food, we share valuable
+            perspective with each other. On our own, we might not know what
+            foods we desire. When combine all our foods, we can truly be
+            satiated.
           </p>
         </article>
         <article class="o-section plan">
           <h2>Plan</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            saepe animi ad ea, a facere totam. Non fugit ducimus corporis nam
-            facilis nulla sed itaque similique, iure possimus dolorum quam
-            consequuntur commodi. Impedit.
+            The best ideas come from complex plans - especially sharing food.
+            With Potluck Planner, you no longer feel the stress that might come
+            with planning a big event. Our seamless user experience takes care
+            of that for you.
           </p>
         </article>
         <article class="o-section potluck">
           <h2>Potluck</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, natus
-            architecto dicta beatae nam quos enim. Dolores recusandae ex,
-            officiis sed corporis deserunt vitae veniam et, asperiores sunt
-            placeat obcaecati, laborum reprehenderit consectetur!
+            Enjoy a guilt-free Potluck. Make new friends, keep in touch, adjust
+            for those "unforeseen circumstances". Most importantly, you will
+            experience a newfound sense of community in your life.
           </p>
         </article>
       </section>
+      <hr />
       <section class="home-section info-section">
         <article class="info-card">
           <figure>
@@ -62,9 +116,9 @@
             <figcaption>create</figcaption>
           </figure>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero esse
-            delectus laudantium assumenda doloribus culpa? Quo ducimus corrupti
-            numquam possimus impedit nam!
+            We make it as easy to create a new Potluck. When you sign up, click
+            the "create new Potluck" button. Set a time, place, and info. Just
+            like that.
           </p>
         </article>
         <article class="info-card">
@@ -76,9 +130,9 @@
             <figcaption>invite</figcaption>
           </figure>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero esse
-            delectus laudantium assumenda doloribus culpa? Quo ducimus corrupti
-            numquam possimus impedit nam!
+            Once you create the Potluck, you can invite attendees from your
+            contact list. Assign them food, have RSVP, and inform you of dietary
+            restrictions.
           </p>
         </article>
         <article class="info-card">
@@ -87,9 +141,9 @@
             <figcaption>recipes</figcaption>
           </figure>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero esse
-            delectus laudantium assumenda doloribus culpa? Quo ducimus corrupti
-            numquam possimus impedit nam!
+            While brainstorming the Potluck, share recipes with each other. Add
+            all of the variety a Potluck needs, without putting in the extra
+            effort.
           </p>
         </article>
         <article class="info-card">
@@ -98,9 +152,9 @@
             <figcaption>chat</figcaption>
           </figure>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero esse
-            delectus laudantium assumenda doloribus culpa? Quo ducimus corrupti
-            numquam possimus impedit nam!
+            Chat with attendees before the Potluck. Make sure everyone is on the
+            same page, and handle any potential problems with ease. No more
+            last-minute surprises.
           </p>
         </article>
         <article class="info-card">
@@ -112,9 +166,8 @@
             <figcaption>directions</figcaption>
           </figure>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero esse
-            delectus laudantium assumenda doloribus culpa? Quo ducimus corrupti
-            numquam possimus impedit nam!
+            Have guests know where the party is. We make sure none of your
+            guests are kept in the dark, while you focus on what really matters.
           </p>
         </article>
         <article class="info-card">
@@ -126,9 +179,9 @@
             <figcaption>memories</figcaption>
           </figure>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero esse
-            delectus laudantium assumenda doloribus culpa? Quo ducimus corrupti
-            numquam possimus impedit nam!
+            Potluck Planner is the place to be. Make memories that last a
+            lifetime, while enjoying a variety of foods and new experiences.
+            Eat, Plan, Potluck.
           </p>
         </article>
       </section>
@@ -138,7 +191,7 @@
     </main>
     <footer>
       <h2>Potluck Planner</h2>
-      <p>&copy; 2020, Team Potluck. All Rights Reserved.</p>
+      <p>&copy; 2020, Team Potluck. <br class="res" />All Rights Reserved.</p>
     </footer>
     <script src="scripts/main.js"></script>
   </body>

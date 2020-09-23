@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@200;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@200;400;600&display=swap");
 
 /* font-family: 'Courgette', cursive;
 font-family: 'Montserrat', sans-serif; */
@@ -12,83 +12,648 @@ v2.0 | 20110126
 License: none (public domain)
 ---------
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
+  width: 100%;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --app-white: rgb(253, 240, 213);
+  --app-green: #36382e;
+  --app-off-green: #5e5d50;
+  --app-green-light: rgba(54, 56, 46, 0.8);
+  --app-orange: #d64933;
+  --app-silver: #7d8491;
+  --app-brown: #402a2c;
 }
 
 /* 
 ----------
-RESET ENDS
+RESET END
 ----------
 */
 
 /* 
 ----------
-GENERAL STYLES  
+APP STYLES  
 ----------
 */
+
+body {
+  background: var(--app-white);
+  color: var(--app-green);
+  font-family: "Montserrat", sans-serif;
+  -webkit-animation: fadeIn 0.8s ease-out both;
+  animation: fadeIn 0.8s ease-out both;
+}
+
+section {
+  -webkit-animation: fadeIn 0.8s ease-out both;
+  animation: fadeIn 0.8s ease-out both;
+}
+
+h1,
+figcaption,
+h2 {
+  text-align: center;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2),
+    0px -2px 10px rgba(253, 240, 213, 0.15);
+}
 
 h1 {
-    font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
+  font-size: calc(2.3rem + 0.15vw);
+  color: var(--app-orange);
+  line-height: 3;
+  font-weight: 600;
+}
+
+h2,
+figcaption {
+  font-family: "Courgette", cursive;
+  text-transform: capitalize;
+  line-height: 2;
+}
+
+cite,
+blockquote {
+  font-size: calc(1.5rem + 0.15vw);
+  line-height: 1.75;
+  text-align: center;
+  margin: 0rem auto 1rem;
+  max-width: 900px;
+  width: 80%;
+  display: block;
+}
+blockquote {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+}
+cite {
+  margin-bottom: 5rem;
+}
+.main-nav a {
+  font-size: calc(1.4rem + 0.15vw);
+  font-weight: 400;
+  opacity: 0.7;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.main-nav a.active-link,
+.main-nav a:hover {
+  opacity: 1;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+h2,
+figcaption,
+.logo-link {
+  font-size: calc(1.75rem + 0.15vw);
+  font-weight: 600;
+}
+
+.about-section figcaption {
+  font-size: calc(1.5rem + 0.15vw);
+}
+
+nav .logo-link {
+  font-weight: 400;
+  opacity: 1;
+}
+
+.about-section figcaption {
+  font-size: calc(1.2rem + 0.15vw);
+}
+
+p {
+  font-size: calc(1rem + 0.15vw);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.res {
+  display: block;
+}
+
+/* 
+----------
+MAIN NAV STYLES  
+----------
+*/
+
+.app-header {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.main-nav {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: var(--app-green-light);
+  color: var(--app-white);
+  width: 100%;
+  padding: 0.75rem 1rem;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.main-nav:hover,
+.main-nav:focus {
+  background: var(--app-green);
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.app-banner,
+.about-banner {
+  height: 50vh;
+  width: 100%;
+  background: url(/media/img/home-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.about-banner {
+  background: url(/media/img/about-banner.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo-link {
+  font-family: "Courgette", cursive;
+  width: 69%;
+}
+
+.main-links,
+.logo-link,
+.burger-menu {
+  display: inline-block;
+  margin: 0;
+  text-transform: capitalize;
+}
+.burger-menu,
+.main-links {
+  width: 29%;
+}
+.main-links {
+  display: none;
+  text-align: right;
+  text-transform: capitalize;
+}
+
+.mobile-links {
+  display: none;
+  position: relative;
+  left: 0;
+  width: 100%;
+  margin-top: 1rem;
+  text-transform: capitalize;
+}
+
+.active-mobile {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.mobile-links a {
+  margin: 0.5rem;
+}
+
+.burger-menu {
+  cursor: pointer;
+  text-align: right;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.burger-box {
+  width: 35px;
+  height: 25px;
+  display: inline-block;
+  position: relative;
+}
+
+.burger-inner {
+  display: block;
+  top: 50%;
+}
+
+.burger-inner,
+.burger-inner::before,
+.burger-inner::after {
+  width: 35px;
+  height: 2.5px;
+  background-color: var(--app-white);
+  border-radius: 3px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.burger-inner::before,
+.burger-inner::after {
+  content: "";
+  display: block;
+}
+.burger-inner::before {
+  top: -10px;
+}
+.burger-inner::after {
+  bottom: -10px;
+}
+
+.burger-menu .burger-inner {
+  transition-duration: 0.1s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.burger-menu .burger-inner::before {
+  transition: top 0.1s 0.14s ease, opacity 0.1s ease;
+}
+.burger-menu .burger-inner::after {
+  transition: bottom 0.1s 0.14s ease,
+    transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.burger-active .burger-inner,
+.burger-active .burger-inner::after {
+  height: 0.15rem;
+}
+.burger-active .burger-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.14s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.burger-active .burger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease, opacity 0.1s 0.14s ease;
+}
+.burger-active .burger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease,
+    transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+a {
+  display: inline-block;
+  color: var(--app-white);
+  text-decoration: none;
+}
+
+/* 
+----------
+NAV STYLES END 
+----------
+*/
+
+section {
+  max-width: 1400px;
+  margin: 2rem auto;
 }
 
 .home-section .info-card img {
-    border-radius: 50%;
-    border: .15rem solid #D64933;
-    width: 3rem;
+  border-radius: 50%;
+  border: 0.15rem solid var(--app-orange);
+  width: calc(3.5rem + 0.15vw);
+  text-align: center;
 }
 
-.about-section .about-card nav a {
+.about-section .a-info nav a {
+  display: inline-block;
+}
+
+.about-section .a-info nav a svg {
+  height: 1.8rem;
+}
+
+.about-section .a-info nav span {
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+  top: -0.25rem;
+  margin: 0 0.5rem;
+}
+
+footer {
+  margin-top: 10rem;
+  background: var(--app-green-light);
+  color: var(--app-white);
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: inset 0 3px 2px rgba(255, 255, 255, 0.22),
+    inset 0 -3px 2px rgba(0, 0, 0, 0.17),
+    inset 0 20px 10px rgba(255, 255, 255, 0.12), 0 0 4px 1px rgba(0, 0, 0, 0.1),
+    0 3px 2px rgba(0, 0, 0, 0.2);
+}
+footer h2 {
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 500px) {
+  /* -------
+  Fonts 
+  ------- */
+
+  h1 {
+    font-size: calc(2.8rem + 0.15vw);
+  }
+
+  nav a {
+    font-size: calc(1.5rem + 0.15vw);
+    font-weight: 400;
+  }
+
+  h2,
+  figcaption,
+  .main-nav .logo-link {
+    font-size: calc(2rem + 0.15vw);
+  }
+
+  p {
+    font-size: calc(1.2rem + 0.15vw);
+  }
+
+  .about-section figcaption {
+    font-size: calc(1.4rem + 0.15vw);
+  }
+  /* -------
+  Fonts End
+  ------- */
+
+  .main-links,
+  .logo-link,
+  .burger-menu {
+    width: 49%;
+  }
+
+  .home-section .info-card img {
+    width: calc(4rem + 0.15vw);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  /* -------
+  Fonts 
+  ------- */
+  h1 {
+    font-size: calc(3.1rem + 0.15vw);
+  }
+
+  .main-nav a {
+    line-height: 1.5;
+    font-size: calc(1.4rem + 0.15vw);
+    font-weight: 400;
+  }
+
+  .main-links,
+  .logo-link,
+  .burger-menu {
+    width: 48%;
+  }
+
+  h2,
+  figcaption,
+  .main-nav .logo-link {
+    font-size: calc(1.9rem + 0.15vw);
+  }
+
+  p {
+    font-size: calc(1.3rem + 0.15vw);
+  }
+
+  .about-section figcaption {
+    font-size: calc(1.5rem + 0.15vw);
+  }
+  /* -------
+  Fonts End
+  ------- */
+  .main-links {
     display: inline-block;
+    text-align: right;
+    text-transform: capitalize;
+  }
+
+  .main-links a,
+  .logo-link {
+    margin: 0 0.5rem;
+  }
+
+  .mobile-links,
+  .burger-menu,
+  .active-mobile {
+    display: none;
+  }
+
+  .home-section .info-card img {
+    border-width: 0.3rem;
+    width: calc(5rem + 0.15vw);
+  }
+
+  .res {
+    display: none;
+  }
 }
 
-.about-section .about-card nav svg {
-    height: 1.5rem;
+@media only screen and (min-width: 1024px) {
+  /* -------
+  Fonts 
+  ------- */
+
+  h1 {
+    font-size: calc(4rem + 0.05vw);
+  }
+
+  .main-nav a {
+    line-height: 1.25;
+    font-size: calc(1.5rem + 0.05vw);
+    font-weight: 400;
+  }
+
+  h2,
+  figcaption {
+    font-size: calc(2.5rem + 0.05vw);
+  }
+
+  .main-nav .logo-link {
+    font-size: calc(2rem + 0.05vw);
+  }
+
+  p {
+    font-size: calc(1.3rem + 0.05vw);
+  }
+
+  /* -------
+  Fonts End
+  ------- */
+  .app-banner,
+  .about-banner {
+    height: 60vh;
+  }
+
+  .main-links a,
+  .logo-link {
+    margin: 0 0.65rem;
+  }
 }
 
-.about-section .about-card nav span {
-    /* position: relative;
-    top: -7.5px; */
-    font-size: 2rem;
-    display: inline-block;
+@media only screen and (min-width: 1600px) {
+  .main-nav {
+    padding: 1rem calc(50% - 800px);
+  }
 }
