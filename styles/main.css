@@ -173,6 +173,12 @@ body {
   background: var(--app-white);
   color: var(--app-green);
   font-family: "Montserrat", sans-serif;
+  -webkit-animation: fadeIn 0.8s ease-out both;
+  animation: fadeIn 0.8s ease-out both;
+}
+
+section {
+  -webkit-animation: fadeIn 0.8s ease-out both;
   animation: fadeIn 0.8s ease-out both;
 }
 
@@ -337,7 +343,7 @@ MAIN NAV STYLES
 .main-links {
   display: none;
   text-align: right;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .mobile-links {
@@ -346,7 +352,7 @@ MAIN NAV STYLES
   left: 0;
   width: 100%;
   margin-top: 1rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .active-mobile {
@@ -580,7 +586,7 @@ footer h2 {
   .main-links {
     display: inline-block;
     text-align: right;
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
 
   .main-links a,
