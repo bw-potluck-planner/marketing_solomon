@@ -150,7 +150,7 @@ table {
 :root {
   --app-white: #fdf0d5;
   --app-green: #36382e;
-  --app-green-light: rgba(54, 56, 46, 0.9);
+  --app-green-light: rgba(54, 56, 46, 0.8);
   --app-orange: #d64933;
   --app-silver: #7d8491;
   --app-brown: #402a2c;
@@ -158,7 +158,7 @@ table {
 
 /* 
 ----------
-RESET ENDS
+RESET END
 ----------
 */
 
@@ -172,6 +172,7 @@ body {
   background: var(--app-white);
   color: var(--app-green);
   font-family: "Montserrat", sans-serif;
+  animation: fadeIn 0.8s ease-out both;
 }
 
 h1,
@@ -179,43 +180,69 @@ h2 {
   text-align: center;
 }
 
-h1,
-footer h2 {
+h1 {
   font-family: "Courgette", cursive;
   font-size: calc(2.5rem + 0.15vw);
-  margin: 2rem auto 3rem;
+  color: var(--app-orange);
+  line-height: 3;
   font-weight: 600;
 }
 
-a {
-  font-size: calc(1.4rem + 0.15vw);
-  font-weight: 200;
+h2,
+figcaption {
+  font-family: "Courgette", cursive;
+  text-transform: capitalize;
+  line-height: 2;
 }
 
-.active-link,
-a:hover {
+.main-nav a {
+  font-size: calc(1.4rem + 0.15vw);
   font-weight: 400;
+  opacity: 0.7;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.main-nav a.active-link,
+.main-nav a:hover {
+  opacity: 1;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 h2,
 figcaption,
 .logo-link {
-  font-size: calc(1.6rem + 0.15vw);
+  font-size: calc(1.75rem + 0.15vw);
   font-weight: 600;
+}
+
+.about-section figcaption {
+  font-size: calc(1.5rem + 0.15vw);
 }
 
 nav .logo-link {
   font-weight: 400;
+  opacity: 1;
 }
 
 p {
   font-size: calc(1rem + 0.15vw);
   font-weight: 400;
+  line-height: 1.5;
+}
+
+.res {
+  display: block;
 }
 
 /* 
 ----------
-NAV STYLES  
+MAIN NAV STYLES  
 ----------
 */
 
@@ -232,6 +259,19 @@ NAV STYLES
   color: var(--app-white);
   width: 100%;
   padding: 0.75rem 1rem;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.main-nav:hover,
+.main-nav:focus {
+  background: var(--app-green);
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .app-banner,
@@ -247,6 +287,9 @@ NAV STYLES
 .about-banner {
   background: url(/media/img/about-banner.jpg);
   background-position: center top;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .logo-link {
@@ -381,19 +424,21 @@ a {
   text-decoration: none;
 }
 
-.auth-link {
-}
-
 /* 
 ----------
-NAV STYLES ENDS 
+NAV STYLES END 
 ----------
 */
+
+section {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
 
 .home-section .info-card img {
   border-radius: 50%;
   border: 0.15rem solid var(--app-orange);
-  width: 3rem;
+  width: calc(3.5rem + 0.15vw);
 }
 
 .about-section .about-card nav a {
@@ -409,90 +454,154 @@ NAV STYLES ENDS
   display: inline-block;
 }
 
-@-webkit-keyframes expand-down {
-  0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
+footer {
+  background: var(--app-brown);
+  color: var(--app-orange);
+  padding: 2rem 0;
+  text-align: center;
 }
-
-@keyframes expand-down {
-  0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fold-up {
-  0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
-@keyframes fold-up {
-  0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
+footer h2 {
+  font-weight: 400;
 }
 
 @media only screen and (min-width: 500px) {
+  /* -------
+  Fonts 
+  ------- */
+
+  h1 {
+    font-size: calc(2.8rem + 0.15vw);
+  }
+
+  nav a {
+    font-size: calc(1.5rem + 0.15vw);
+    font-weight: 400;
+  }
+
+  h2,
+  figcaption,
+  .main-nav .logo-link {
+    font-size: calc(2rem + 0.15vw);
+  }
+
+  p {
+    font-size: calc(1.2rem + 0.15vw);
+  }
+
+  /* -------
+  Fonts End
+  ------- */
+
   .main-links,
   .logo-link,
   .burger-menu {
     width: 49%;
   }
+
+  .home-section .info-card img {
+    width: calc(4rem + 0.15vw);
+  }
 }
 
 @media only screen and (min-width: 800px) {
+  /* -------
+  Fonts 
+  ------- */
+  h1 {
+    font-size: calc(3.1rem + 0.15vw);
+  }
+
+  .main-nav a {
+    line-height: 1.5;
+    font-size: calc(1.4rem + 0.15vw);
+    font-weight: 400;
+  }
+
+  .main-links,
+  .logo-link,
+  .burger-menu {
+    width: 48%;
+  }
+
+  h2,
+  figcaption,
+  .main-nav .logo-link {
+    font-size: calc(1.9rem + 0.15vw);
+  }
+
+  p {
+    font-size: calc(1.3rem + 0.15vw);
+  }
+  /* -------
+  Fonts End
+  ------- */
   .main-links {
     display: inline-block;
     text-align: right;
     text-transform: uppercase;
   }
+
+  .main-links a,
+  .logo-link {
+    margin: 0 0.5rem;
+  }
+
   .mobile-links,
   .burger-menu,
   .active-mobile {
     display: none;
+  }
+
+  .home-section .info-card img {
+    width: calc(5rem + 0.15vw);
+  }
+
+  .res {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* -------
+  Fonts 
+  ------- */
+
+  h1 {
+    font-size: calc(3.15rem + 0.05vw);
+  }
+
+  .main-nav a {
+    line-height: 1.25;
+    font-size: calc(1.2rem + 0.5vw);
+    font-weight: 400;
+  }
+
+  h2,
+  figcaption,
+  .main-nav .logo-link {
+    font-size: calc(2rem + 0.5vw);
+  }
+
+  p {
+    font-size: calc(1.3rem + 0.5vw);
+  }
+
+  /* -------
+  Fonts End
+  ------- */
+  .app-banner,
+  .about-banner {
+    height: 60vh;
+  }
+
+  .main-links a,
+  .logo-link {
+    margin: 0 0.65rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .main-nav {
+    padding: 1rem calc(50% - 800px);
   }
 }
