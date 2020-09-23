@@ -148,7 +148,7 @@ table {
 }
 
 :root {
-  --app-white: #fdf0d5;
+  --app-white: rgb(253, 240, 213);
   --app-green: #36382e;
   --app-green-light: rgba(54, 56, 46, 0.8);
   --app-orange: #d64933;
@@ -176,13 +176,16 @@ body {
 }
 
 h1,
+figcaption,
 h2 {
   text-align: center;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2),
+    0px -2px 10px rgba(253, 240, 213, 0.15);
 }
 
 h1 {
   font-family: "Courgette", cursive;
-  font-size: calc(2.5rem + 0.15vw);
+  font-size: calc(2.3rem + 0.15vw);
   color: var(--app-orange);
   line-height: 3;
   font-weight: 600;
@@ -431,7 +434,7 @@ NAV STYLES END
 */
 
 section {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 2rem auto;
 }
 
@@ -439,6 +442,7 @@ section {
   border-radius: 50%;
   border: 0.15rem solid var(--app-orange);
   width: calc(3.5rem + 0.15vw);
+  text-align: center;
 }
 
 .about-section .about-card nav a {
@@ -455,10 +459,15 @@ section {
 }
 
 footer {
+  margin-top: 10rem;
   background: var(--app-brown);
   color: var(--app-orange);
   padding: 2rem 0;
   text-align: center;
+  box-shadow: inset 0 3px 2px rgba(255, 255, 255, 0.22),
+    inset 0 -3px 2px rgba(0, 0, 0, 0.17),
+    inset 0 20px 10px rgba(255, 255, 255, 0.12), 0 0 4px 1px rgba(0, 0, 0, 0.1),
+    0 3px 2px rgba(0, 0, 0, 0.2);
 }
 footer h2 {
   font-weight: 400;
@@ -553,6 +562,7 @@ footer h2 {
   }
 
   .home-section .info-card img {
+    border-width: 0.3rem;
     width: calc(5rem + 0.15vw);
   }
 
@@ -567,23 +577,26 @@ footer h2 {
   ------- */
 
   h1 {
-    font-size: calc(3.15rem + 0.05vw);
+    font-size: calc(4rem + 0.05vw);
   }
 
   .main-nav a {
     line-height: 1.25;
-    font-size: calc(1.2rem + 0.5vw);
+    font-size: calc(1.5rem + 0.05vw);
     font-weight: 400;
   }
 
   h2,
-  figcaption,
+  figcaption {
+    font-size: calc(2.5rem + 0.05vw);
+  }
+
   .main-nav .logo-link {
-    font-size: calc(2rem + 0.5vw);
+    font-size: calc(2rem + 0.05vw);
   }
 
   p {
-    font-size: calc(1.3rem + 0.5vw);
+    font-size: calc(1.3rem + 0.05vw);
   }
 
   /* -------

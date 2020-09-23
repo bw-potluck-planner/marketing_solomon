@@ -1,0 +1,126 @@
+:root {
+  --app-white: rgb(253, 240, 213);
+  --app-green: #36382e;
+  --app-green-light: rgba(54, 56, 46, 0.8);
+  --app-orange: #d64933;
+  --app-orange-light: rgba(214, 73, 51, 0.8);
+  --app-silver: #7d8491;
+  --app-brown: #402a2c;
+}
+
+.overview-section {
+  /* margin-bottom: 5rem; */
+}
+
+hr {
+  border: 2px dashed var(--app-orange);
+  max-width: 1400px;
+  margin: 6rem auto;
+}
+
+.o-section {
+  background: var(--app-green-light);
+  color: var(--app-white);
+  border-radius: 1rem;
+  box-shadow: inset 0 3px 2px rgba(255, 255, 255, 0.22),
+    inset 0 -3px 2px rgba(0, 0, 0, 0.17),
+    inset 0 20px 10px rgba(255, 255, 255, 0.12), 0 0 4px 1px rgba(0, 0, 0, 0.1),
+    0 3px 2px rgba(0, 0, 0, 0.2);
+  margin: 2.5rem 1rem 4rem;
+  padding: 1.5rem;
+}
+
+.o-section h2,
+.o-section {
+  text-align: center;
+}
+
+.info-section {
+  width: 100%;
+}
+
+.info-section .info-card {
+  background: var(--app-brown);
+  color: var(--app-orange-light);
+  border-radius: 0.6rem;
+  margin: 3rem 1.5rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: inset 0 3px 2px rgba(255, 255, 255, 0.22),
+    inset 0 -3px 2px rgba(0, 0, 0, 0.17),
+    inset 0 20px 10px rgba(255, 255, 255, 0.12), 0 0 4px 1px rgba(0, 0, 0, 0.1),
+    0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.home-section .info-card img {
+  background: var(--app-green);
+  border: 0.15rem solid var(--app-orange-light);
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2),
+    0px -2px 10px rgba(255, 255, 255, 0.15);
+}
+
+.about-section figcaption {
+  font-family: "Montserrat", sans-serif;
+  box-shadow: none;
+}
+
+.about-section img {
+  border: 0.2rem solid var(--app-green);
+  border-radius: 50%;
+  box-shadow: inset 0 3px 2px rgba(255, 255, 255, 0.22),
+    inset 0 -3px 2px rgba(0, 0, 0, 0.17),
+    inset 0 20px 10px rgba(255, 255, 255, 0.12), 0 0 4px 1px rgba(0, 0, 0, 0.1),
+    0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 500px) {
+  .o-section h2,
+  .o-section {
+    text-align: justify;
+  }
+  .info-section .info-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 4rem auto;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .info-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .info-section .info-card {
+    width: 45%;
+    max-width: 45%;
+    margin: 2rem auto;
+  }
+  .home-section .info-card img {
+    border-width: 0.2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* .info-section .info-card {
+    width: 30%;
+    max-width: 30%;
+    margin: 2rem auto;
+  } */
+
+  .home-section .info-card img {
+    border-width: 0.25rem;
+    width: calc(5.5rem + 0.15vw);
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .info-section .info-card {
+    width: 31%;
+    max-width: 400px;
+    margin: 2rem auto;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+}
