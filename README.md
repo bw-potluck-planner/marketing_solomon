@@ -16,7 +16,7 @@ _Eat, Plan, Potluck_
 
 ## Development Team 🍱
 
-### Project Lead
+### Project Lead ☕
 
 <img src="https://avatars3.githubusercontent.com/u/20312870?s=460&u=1cbd3c7e532dd9ec57b70b32e62681a80fda03c7&v=4" alt="Avatar for Tiffany" width="150">
 
@@ -24,7 +24,7 @@ _Eat, Plan, Potluck_
 
 
 
-### Backend Engineer
+### Backend Engineer 🥞
 
 <img src="https://avatars3.githubusercontent.com/u/66280945?s=460&u=b59a8cf673afe0cd2211f28b78a0bca41b5f3a38&v=4" alt="Avatar for Tim" width="150">
 
@@ -32,7 +32,7 @@ _Eat, Plan, Potluck_
 
 
 
-### Front End Architects
+### Front End Architects 🍛
 
 <img src="https://avatars3.githubusercontent.com/u/67298892?s=460&u=7798763a452a1cc905d641cb94fb0216a18cd0ea&v=4" alt="Avatar for Sara" width="150">
 
@@ -45,7 +45,7 @@ _Eat, Plan, Potluck_
 
 
 
-### Marketing & UI
+### Marketing & UI 🥧
 
 <img src="https://ca.slack-edge.com/ESZCHB482-W0198A541D0-4d43ee411079-512" alt="Avatar for Andrew" width="150">
 
